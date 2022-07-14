@@ -1,12 +1,12 @@
+import org.springframework.security.crypto.bcrypt.BCrypt;
+
 import java.sql.*;
 
 public class DbUtil {
     public static final String DB_URL = "jdbc:mysql://localhost:3306/workshop2?useSSL=false&characterEncoding=utf8&serverTimezone=UTC";
     public static final String  DB_USER = "root";
     public static final String  DB_PASS = "ciapek123";
-
     public static final String DELETE_QUERY = "";
-
 
     public static Connection getConnection() throws SQLException{
         return DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
@@ -47,6 +47,8 @@ public class DbUtil {
             e.printStackTrace();
         }
     }
+
+
 
 }
 
