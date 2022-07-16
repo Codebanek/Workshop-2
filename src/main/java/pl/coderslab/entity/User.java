@@ -1,7 +1,15 @@
 package pl.coderslab.entity;
 
 public class User {
+    //list of parameters
+    private int id;
+    private String email;
+    private String username;
+    private String password;
+    public User(){}; //parameterless constructor --> params(above) set to default values.
 
+
+    // setters and getters below list.
     public int getId() {
         return id;
     }
@@ -35,17 +43,7 @@ public class User {
     }
 
 
-    public User(int id, String email, String username, String password) {
-        this.id = id;
-        this.email = email;
-        this.username = username;
-        this.password = password;
-        System.out.println("new user created!");
-    }
 
-    private int id;
-    private String email;
-    private String username;
-    private String password;
+
 
 }
