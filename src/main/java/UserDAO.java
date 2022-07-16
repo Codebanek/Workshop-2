@@ -8,8 +8,6 @@ public class UserDAO {
         return BCrypt.hashpw(password, BCrypt.gensalt());
     }
 
-    ;
-
     public static User create(User user) {
 
         try (Connection conn = DbUtil.getConnection()) {
@@ -29,7 +27,7 @@ public class UserDAO {
             e.printStackTrace();
             return null;
         }
-    } //
+    }  //enter a record
 
     public static User read(int userId) {
         try (Connection conn = DbUtil.getConnection()) {
@@ -49,7 +47,7 @@ public class UserDAO {
         }
         return null;
 
-    }
+    } //read record
 
     public static void update(User user) {
         try (Connection conn = DbUtil.getConnection()) {
@@ -62,7 +60,7 @@ public class UserDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
+    } //update record
 
     public static User[] findAll() {
         try (Connection conn = DbUtil.getConnection()) {
@@ -82,7 +80,7 @@ public class UserDAO {
             e.printStackTrace();
             return null;
         }
-    }
+    } //print all records
     public static void delete(int userId) {
         try (Connection conn = DbUtil.getConnection()) {
             PreparedStatement statement = conn.prepareStatement(DbUtil.DELETE_USER_QUERY);
@@ -91,5 +89,5 @@ public class UserDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
+    } //remove record
 }
