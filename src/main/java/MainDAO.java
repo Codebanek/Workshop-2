@@ -5,6 +5,8 @@ public class MainDAO {
 
     public static void main(String[] args) {
 
+
+
         //ADDING USER INTO USERS TABLE.
 /*        UserDAO userDAO = new UserDAO();
         User user = new User();
@@ -22,10 +24,10 @@ public class MainDAO {
         userToUpdate.setUserName("SIEMAAAAA");
         UserDAO.update(userToUpdate);*/
 
-       // User[] all = UserDAO.findAll();  //print all record (print code located inside
-        //addToArray method in DbUtil class
+       User[] all = UserDAO.findAll();  //print all record (print code located inside
+        // /addToArray method in DbUtil class
 
-        UserDAO.delete(3);
+       // UserDAO.delete(3);
 
 
 
